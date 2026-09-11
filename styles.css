@@ -343,3 +343,25 @@ a{text-decoration:none;color:inherit}
   .cta-box{padding:34px 24px}
   .contact-form{padding:24px}
 }
+
+/* Keep the headline over the original photo on phones and tablets. */
+@media(max-width:950px){
+  .hero-shade{
+    display:block;
+    bottom:auto;
+    aspect-ratio:1672 / 941;
+    background:linear-gradient(90deg,rgba(8,14,24,.82),rgba(8,14,24,.52) 48%,transparent 73%);
+  }
+  .hero-content{position:static;padding:0;background:transparent}
+  .hero-content>.eyebrow{
+    position:absolute;z-index:2;top:clamp(12px,3vw,28px);left:4%;
+    width:58%;margin:0;font-size:clamp(6px,1.35vw,12px);letter-spacing:.12em;
+  }
+  .hero h1{
+    position:absolute;z-index:2;top:clamp(32px,7vw,66px);left:4%;
+    width:54%;font-size:clamp(17px,3.7vw,35px);line-height:1.04;letter-spacing:-.035em;
+  }
+  .hero p{margin:22px 20px 20px;font-size:15px}
+  .hero-actions{margin:0 20px}
+  .hero-points{margin:22px 20px 26px;gap:12px;font-size:12px}
+}
